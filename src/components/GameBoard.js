@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
-import _ from 'underscore';  // Make sure underscore is installed with npm
+import _ from 'underscore';  
 
 const GameBoard = ({ flips, setFlips, matches, setMatches }) => {
   const [cards, setCards] = useState([]);
@@ -8,7 +8,7 @@ const GameBoard = ({ flips, setFlips, matches, setMatches }) => {
   const [secondCard, setSecondCard] = useState(null);
   const [isChecking, setIsChecking] = useState(false); // To prevent fast clicks
 
-  // Load the audio files
+  // audio files
   const clickSound = new Audio('/audio/click.wav');
   const matchSound = new Audio('/audio/match.wav');
   const winSound = new Audio('/audio/win.wav');
