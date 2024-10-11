@@ -1,0 +1,86 @@
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('/public/img/bun.png'); 
+  background-size: cover;
+}
+
+header {
+  margin-top: 20px;
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  font-family: 'Kanit', sans-serif;
+}
+
+#ui-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 10px;
+  color: #333;
+}
+
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.card {
+  position: relative;
+  width: 100px;
+  height: 140px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-down, .card-up {
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  backface-visibility: hidden;
+  border-radius: 10px;
+  transition: transform 0.6s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-down {
+  background-color: #ccc;
+}
+
+.card-up {
+  transform: rotateY(180deg);
+}
+
+.flipped .card-up {
+  transform: rotateY(0deg);
+}
+
+.flipped .card-down {
+  transform: rotateY(180deg);
+}
+
+.reset-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #555;
+}
